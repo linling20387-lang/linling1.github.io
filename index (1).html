@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Eat & Explore Vietnam - Discover Vietnamese restaurants, menus, maps and food experiences for international travelers.">
+  <title>Eat & Explore Vietnam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+:root{--blue:#0b5ea8;--blue-dark:#083b68;--orange:#f28c28;--orange-dark:#dc7310;--white:#fff;--bg:#f7fbff;--text:#17324d;--muted:#64748b;--line:#e4edf5;--shadow:0 12px 35px rgba(15,76,129,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6}a{text-decoration:none;color:inherit}button,input,select{font:inherit}.container{width:min(1180px,92%);margin:auto}.narrow{max-width:760px}.site-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav-wrap{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:800;color:var(--blue-dark);font-size:19px}.logo span{margin-right:6px}.logo b{color:var(--orange)}nav{display:flex;gap:24px;font-size:14px;font-weight:600;color:#456078}nav a:hover{color:var(--orange)}.nav-toggle{display:none;border:0;background:transparent;font-size:27px;color:var(--blue-dark)}
+.hero{min-height:570px;display:flex;align-items:center;background:linear-gradient(115deg,rgba(6,55,96,.95),rgba(11,94,168,.82)),url('https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=1800&q=80') center/cover}.hero-content{color:#fff;padding:90px 0}.eyebrow{font-size:13px;font-weight:800;letter-spacing:1.8px;color:#ffd39e}.hero h1{font-size:clamp(42px,7vw,76px);line-height:1.05;max-width:780px;margin:18px 0}.hero h1 span{color:#ffad57}.hero p{font-size:18px;max-width:680px;color:#eaf4fc}.hero-search{display:flex;max-width:690px;margin-top:30px;background:#fff;padding:7px;border-radius:14px;box-shadow:0 14px 35px rgba(0,0,0,.18)}.hero-search input{flex:1;border:0;outline:0;padding:14px 16px;color:var(--text);min-width:0}.btn,.hero-search button{border:0;border-radius:10px;padding:12px 19px;font-weight:800;cursor:pointer;transition:.2s}.hero-search button,.btn-orange{background:var(--orange);color:#fff}.btn-orange:hover,.hero-search button:hover{background:var(--orange-dark);transform:translateY(-1px)}.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:var(--blue-dark)}.full{width:100%}
+section{padding:85px 0}.filters-section,.passport-section{background:#fff}.features-section,.map-section,.contact-location{background:var(--bg)}.section-heading{text-align:center;max-width:720px;margin:0 auto 40px}.section-heading.left{text-align:left;margin-left:0}.section-tag{display:inline-block;color:var(--orange);font-size:12px;font-weight:800;letter-spacing:1.6px;margin-bottom:8px}.section-heading h2{font-size:clamp(28px,4vw,40px);line-height:1.2;color:var(--blue-dark);margin:0 0 12px}.section-heading p{color:var(--muted);margin:0}.filters{display:grid;grid-template-columns:repeat(4,1fr) auto;gap:12px;align-items:end}.filters label,.calculator-card label{display:flex;flex-direction:column;gap:7px;font-size:12px;font-weight:800;color:#496278}.filters select,.calculator-card select,.calculator-card input{border:1px solid var(--line);border-radius:10px;background:#fff;padding:12px;color:var(--text);outline:none}.results-meta{margin:24px 0 15px;color:var(--muted);font-size:14px}.restaurant-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.restaurant-card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 8px 24px rgba(15,76,129,.06);transition:.25s}.restaurant-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.restaurant-img{height:180px;width:100%;object-fit:cover}.restaurant-body{padding:18px}.restaurant-body h3{margin:0 0 6px;color:var(--blue-dark);font-size:18px}.restaurant-location{font-size:12px;color:var(--muted);min-height:38px}.tags{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}.tag{font-size:10px;padding:5px 8px;border-radius:20px;background:#eef6fd;color:var(--blue);font-weight:700}.price{font-size:13px;font-weight:800;color:var(--orange)}.card-actions{display:flex;gap:8px;margin-top:15px}.card-actions .btn{flex:1;font-size:12px;padding:10px 8px}
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.feature-card{background:#fff;border:1px solid var(--line);padding:26px;border-radius:17px;box-shadow:0 8px 22px rgba(15,76,129,.05)}.feature-card>div{font-size:29px}.feature-card h3{margin:12px 0 5px;color:var(--blue-dark)}.feature-card p{margin:0;color:var(--muted);font-size:14px}.map-toolbar{display:flex;gap:10px;justify-content:flex-end;margin-bottom:14px}.map-toolbar select{min-width:260px;padding:12px;border:1px solid var(--line);border-radius:10px;background:#fff}.leaflet-map{height:500px;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);z-index:1}
+.calculator-card{background:#fff;border:1px solid var(--line);padding:28px;border-radius:18px;box-shadow:var(--shadow);display:grid;gap:16px}.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.calc-result{background:#eef7ff;border-radius:12px;padding:18px;text-align:center;color:var(--blue-dark)}.calc-result strong{color:var(--orange);font-size:20px}.passport-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}.passport-item{border:1px solid var(--line);background:#fff;border-radius:14px;padding:18px;text-align:center;cursor:pointer;transition:.2s}.passport-item:hover{transform:translateY(-3px)}.passport-item.tried{border-color:var(--orange);background:#fff7ed}.passport-item .food-icon{font-size:34px}.passport-item strong{display:block;font-size:13px;margin-top:7px}.passport-item small{color:var(--muted);font-size:10px}.passport-item.tried strong:after{content:' ✓';color:var(--orange)}
+.contact-location .section-heading{margin-bottom:45px}.contact-grid{display:grid;grid-template-columns:.8fr 1.5fr;gap:30px;align-items:stretch}.contact-info{display:flex;flex-direction:column;gap:16px}.contact-card{display:flex;align-items:flex-start;gap:16px;padding:22px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 8px 25px rgba(15,76,129,.06);transition:.25s}.contact-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.contact-icon{width:46px;height:46px;min-width:46px;display:flex;align-items:center;justify-content:center;background:#fff3e5;border-radius:12px;font-size:21px}.contact-card h3{margin:0 0 6px;color:#123b5d;font-size:17px}.contact-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}.map-container{width:100%;min-height:450px;overflow:hidden;background:#fff;border-radius:18px;border:1px solid #e1eaf2;box-shadow:var(--shadow)}.map-container iframe{display:block;width:100%;height:450px;border:0}.destination-map-list{display:grid;grid-template-columns:repeat(5,1fr);gap:15px;margin-top:25px}.destination-item{display:flex;align-items:center;gap:10px;padding:15px;background:#fff;border:1px solid var(--line);border-radius:12px;cursor:pointer;text-align:left;transition:.25s}.destination-item:hover{border-color:var(--orange);transform:translateY(-2px)}.destination-item>span{font-size:24px}.destination-item strong{display:block;margin-bottom:3px;color:#123b5d;font-size:14px}.destination-item small{color:#8492a0;font-size:11px}.map-note{font-size:12px;color:var(--muted);margin:18px 0 0}.map-note code{background:#eef3f7;padding:2px 5px;border-radius:4px}
+.site-footer{background:#082f51;color:#dcecf9;padding:55px 0 0}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px;padding-bottom:40px}.footer-logo{color:#fff}.footer-grid p{max-width:360px;color:#a9c1d4;font-size:14px}.footer-grid h4{color:#fff;margin-top:0}.footer-grid>div>a:not(.logo){display:block;color:#a9c1d4;margin:8px 0;font-size:14px}.footer-grid>div>a:not(.logo):hover{color:#ffad57}.copyright{text-align:center;border-top:1px solid rgba(255,255,255,.1);padding:18px;font-size:12px;color:#9bb3c5}
+.modal{display:none;position:fixed;inset:0;z-index:2000}.modal.open{display:block}.modal-overlay{position:absolute;inset:0;background:rgba(2,25,43,.68)}.modal-box{position:relative;width:min(720px,92%);max-height:90vh;overflow:auto;background:#fff;border-radius:20px;margin:5vh auto;padding:30px;z-index:1}.modal-close{position:absolute;right:16px;top:12px;border:0;background:#eef4f8;border-radius:50%;width:38px;height:38px;font-size:24px;cursor:pointer}.modal-box h2{color:var(--blue-dark);margin-top:0}.modal-menu{display:grid;grid-template-columns:1fr 1fr;gap:10px}.menu-row{display:flex;justify-content:space-between;gap:15px;padding:11px 0;border-bottom:1px solid var(--line);font-size:13px}.menu-row span:last-child{font-weight:800;color:var(--orange)}
+@media(max-width:1000px){.restaurant-grid{grid-template-columns:repeat(2,1fr)}.feature-grid{grid-template-columns:repeat(2,1fr)}.passport-grid{grid-template-columns:repeat(3,1fr)}.filters{grid-template-columns:repeat(2,1fr)}.filters .btn{height:44px}.contact-grid{grid-template-columns:1fr}.contact-info{display:grid;grid-template-columns:repeat(2,1fr)}.destination-map-list{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.nav-toggle{display:block}nav{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;padding:18px 4%;flex-direction:column;gap:15px;border-bottom:1px solid var(--line)}nav.open{display:flex}.hero{min-height:520px}.hero-content{padding:65px 0}.hero-search{flex-direction:column}.hero-search button{width:100%}.filters{grid-template-columns:1fr}.map-toolbar{justify-content:stretch;flex-direction:column}.map-toolbar select{min-width:0}.leaflet-map{height:420px}.destination-map-list{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){section{padding:65px 0}.restaurant-grid,.feature-grid,.contact-info,.footer-grid{grid-template-columns:1fr}.passport-grid{grid-template-columns:repeat(2,1fr)}.destination-map-list{grid-template-columns:1fr}.calc-grid,.modal-menu{grid-template-columns:1fr}.hero h1{font-size:43px}.map-container iframe{height:450px}}
+
+/* Expanded restaurant directory + embedded Google Maps search */
+.map-toolbar{flex-wrap:wrap;align-items:center}
+.map-toolbar select,.map-toolbar input{min-width:220px;flex:1;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--text);outline:none}
+.google-map-panel{width:100%;height:500px;overflow:hidden;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);background:#eaf2f8}
+.google-map-panel iframe{display:block;width:100%;height:100%;border:0}
+.restaurant-card .restaurant-body{display:flex;flex-direction:column;height:100%}
+.restaurant-card .restaurant-dishes{font-size:12px;line-height:1.55;color:var(--muted);margin:10px 0;min-height:45px;overflow-wrap:anywhere}
+.restaurant-dishes span{font-weight:800;color:var(--blue-dark)}
+.restaurant-card .restaurant-location{min-height:0;line-height:1.5;overflow-wrap:anywhere}
+.restaurant-card .price{margin-top:auto;padding-top:8px}
+.allergen-note{font-size:12px;line-height:1.5;color:#8a4b0b;background:#fff7ed;border:1px solid #fed7aa;border-radius:9px;padding:9px 10px;margin:8px 0}
+.modal-address{overflow-wrap:anywhere}
+.empty-state{grid-column:1/-1;background:#f7fbff;border:1px dashed #b8cfe0;padding:30px;border-radius:14px;text-align:center;color:var(--muted)}
+@media(max-width:700px){.google-map-panel{height:430px}.map-toolbar>*{width:100%;min-width:0!important}.restaurant-card .restaurant-dishes{min-height:0}}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="#home"><span>🍜</span> Eat & Explore <b>Vietnam</b></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
+      <nav id="mainNav">
+        <a href="#restaurants">Restaurants</a>
+        <a href="#map-section">Map</a>
+        <a href="#calculator">Cost Calculator</a>
+        <a href="#passport">Food Passport</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <span class="eyebrow">YOUR TASTE. YOUR JOURNEY. 🇻🇳</span>
+        <h1>Eat your way through <span>Vietnam.</span></h1>
+        <p>Find local restaurants, discover authentic dishes, check locations and plan your food budget — all in one place.</p>
+        <div class="hero-search">
+          <input id="heroSearch" type="search" placeholder="Search restaurant, dish or city..." aria-label="Search restaurants">
+          <button id="heroSearchBtn">Search</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="filters-section" id="restaurants">
+      <div class="container">
+        <div class="section-heading left">
+          <span class="section-tag">DISCOVER</span>
+          <h2>Find your next food experience</h2>
+          <p>Filter restaurants by destination, cuisine, dietary needs and budget.</p>
+        </div>
+        <div class="filters">
+          <label>City
+            <select id="cityFilter">
+              <option value="all">All cities</option>
+              <option value="Hanoi">Hanoi</option>
+              <option value="Hue">Hue</option>
+              <option value="Da Nang">Da Nang</option>
+              <option value="Hoi An">Hoi An</option>
+              <option value="Ho Chi Minh City">Ho Chi Minh City</option>
+            </select>
+          </label>
+          <label>Food type
+            <select id="foodFilter">
+              <option value="all">All cuisines</option>
+              <option value="Vietnamese">Vietnamese</option>
+              <option value="Coffee">Coffee & drinks</option>
+              <option value="Dessert">Dessert & snacks</option>
+              <option value="Seafood">Seafood</option>
+              <option value="Vegetarian">Vegetarian</option>
+              <option value="Buffet">Buffet</option>
+              <option value="BBQ">BBQ</option>
+              <option value="Asian">Asian</option>
+            </select>
+          </label>
+          <label>Dietary
+            <select id="dietFilter">
+              <option value="all">Any dietary need</option>
+              <option value="vegetarian">Vegetarian options</option>
+              <option value="family">Family friendly</option>
+            </select>
+          </label>
+          <label>Budget
+            <select id="budgetFilter">
+              <option value="all">Any budget</option>
+              <option value="low">Under 200,000 VND</option>
+              <option value="mid">200,000–400,000 VND</option>
+              <option value="high">Over 400,000 VND</option>
+            </select>
+          </label>
+          <button class="btn btn-orange" id="resetFilters">Reset</button>
+        </div>
+        <div class="results-meta"><span id="resultCount"></span></div>
+        <div class="restaurant-grid" id="restaurantGrid"></div>
+      </div>
+    </section>
+
+    <section class="features-section">
+      <div class="container feature-grid">
+        <article class="feature-card"><div>🔎</div><h3>Easy discovery</h3><p>Search and filter places that match your trip style.</p></article>
+        <article class="feature-card"><div>🗺️</div><h3>Map & directions</h3><p>Open a restaurant directly in Google Maps for navigation.</p></article>
+        <article class="feature-card"><div>💰</div><h3>Plan your budget</h3><p>Estimate group meal costs in VND and USD.</p></article>
+        <article class="feature-card"><div>🎫</div><h3>Food Passport</h3><p>Keep track of Vietnamese dishes you have tried.</p></article>
+      </div>
+    </section>
+
+    <section class="map-section" id="map-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-tag">CULINARY MAP</span>
+          <h2>Explore restaurants on the map</h2>
+          <p>Search by restaurant name, dish or address. Choose a result to display it on Google Maps and open directions.</p>
+        </div>
+        <div class="map-toolbar">
+          <select id="mapRestaurantSelect"><option value="all">Search all restaurants</option></select><input id="mapSearchInput" type="search" placeholder="Search a restaurant or dish..." aria-label="Search restaurant on map"><button class="btn btn-orange" id="mapSearchBtn">Find on Google Maps</button>
+          <button class="btn btn-blue" id="locateBtn">📍 Use my location</button>
+        </div>
+        <div class="google-map-panel"><iframe id="restaurantMap" title="Google Maps restaurant search" src="https://www.google.com/maps?q=restaurants%20in%20Vietnam&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+      </div>
+    </section>
+
+    <section class="calculator-section" id="calculator">
+      <div class="container narrow">
+        <div class="section-heading">
+          <span class="section-tag">SMART PLANNING</span>
+          <h2>Group meal cost calculator</h2>
+          <p>Get a quick estimate before you choose your restaurant.</p>
+        </div>
+        <div class="calculator-card">
+          <label>Restaurant<select id="calcRestaurant"></select></label>
+          <div class="calc-grid">
+            <label>Adults<input id="adultCount" type="number" min="1" value="2"></label>
+            <label>Children<input id="childCount" type="number" min="0" value="0"></label>
+          </div>
+          <label>Estimated price per adult (VND)<input id="adultPrice" type="number" min="0" value="180000"></label>
+          <button class="btn btn-orange full" id="calculateBtn">Calculate total</button>
+          <div class="calc-result" id="calcResult">Estimated total: <strong>360,000 VND</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="passport-section" id="passport">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-tag">YOUR FOOD JOURNEY</span>
+          <h2>Vietnam Food Passport</h2>
+          <p>Mark dishes you have tried and build your own food journey.</p>
+        </div>
+        <div class="passport-grid" id="passportGrid"></div>
+      </div>
+    </section>
+
+    <section class="contact-location" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-tag">CONTACT & LOCATION</span>
+          <h2>Liên hệ & Bản đồ</h2>
+          <p>Khám phá những điểm đến ẩm thực nổi bật tại Việt Nam và dễ dàng tìm đường đến địa điểm bạn muốn.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-card"><div class="contact-icon">📍</div><div><h3>Destinations</h3><p>Hanoi · Hue · Da Nang · Hoi An · Ho Chi Minh City</p></div></div>
+            <div class="contact-card"><div class="contact-icon">✉️</div><div><h3>Email</h3><p>hello@eatandexplore.vn</p></div></div>
+            <div class="contact-card"><div class="contact-icon">📞</div><div><h3>Hotline</h3><p>+84 123 456 789</p></div></div>
+            <div class="contact-card"><div class="contact-icon">🌏</div><div><h3>Traveler support</h3><p>Restaurant discovery, food recommendations and directions for international travelers.</p></div></div>
+          </div>
+          <div class="map-container">
+            <!-- Temporary Google Maps embed. Replace the src with your own Google Maps embed URL. -->
+            <iframe id="googleMapFrame" src="https://www.google.com/maps?q=21.0285,105.8542&z=6&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Vietnam map"></iframe>
+          </div>
+        </div>
+        <div class="destination-map-list">
+          <button class="destination-item" data-city-map="21.0285,105.8542"><span>🇻🇳</span><div><strong>Hà Nội</strong><small>21.0285, 105.8542</small></div></button>
+          <button class="destination-item" data-city-map="16.4637,107.5909"><span>🏯</span><div><strong>Huế</strong><small>16.4637, 107.5909</small></div></button>
+          <button class="destination-item" data-city-map="16.0544,108.2022"><span>🌊</span><div><strong>Đà Nẵng</strong><small>16.0544, 108.2022</small></div></button>
+          <button class="destination-item" data-city-map="15.8801,108.3380"><span>🏮</span><div><strong>Hội An</strong><small>15.8801, 108.3380</small></div></button>
+          <button class="destination-item" data-city-map="10.8231,106.6297"><span>🌆</span><div><strong>Hồ Chí Minh</strong><small>10.8231, 106.6297</small></div></button>
+        </div>
+        <p class="map-note">Tip: Open Google Maps → Share → Embed a map → copy the iframe code, then replace the <code>src</code> above with Google's embed URL.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="logo footer-logo" href="#home">🍜 Eat & Explore <b>Vietnam</b></a><p>Discover Vietnam through its food, people and places.</p></div>
+      <div><h4>Explore</h4><a href="#restaurants">Restaurants</a><a href="#map-section">Map</a><a href="#passport">Food Passport</a></div>
+      <div><h4>Plan</h4><a href="#calculator">Cost Calculator</a><a href="#contact">Contact & Location</a></div>
+    </div>
+    <div class="copyright">© 2026 Eat & Explore Vietnam · Demo website</div>
+  </footer>
+
+  <div class="modal" id="restaurantModal" aria-hidden="true">
+    <div class="modal-overlay" data-close-modal></div>
+    <div class="modal-box">
+      <button class="modal-close" data-close-modal aria-label="Close">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script>
+/* Eat & Explore Vietnam — restaurant directory with Google Maps search.
+   Addresses and signature dishes are based on the user's uploaded Hanoi, Hue and Hoi An lists.
+   Menu prices not supplied in those documents are shown as “Check with restaurant”. */
+const restaurants = [
+// HANOI — original four restaurants
+{id:'ngon',name:'Quán Ăn Ngon',city:'Hanoi',type:'Vietnamese',diet:['family'],price:180000, address:'18 Phan Bội Châu, Cửa Nam, Hà Nội, Việt Nam',dishes:['bánh xèo','nem cua bể','phở cuốn','bún chả','chả cá','phở'],tags:['Local dishes','Family friendly'],menu:[['Bánh xèo','Check with restaurant'],['Nem cua bể','Check with restaurant'],['Phở cuốn','Check with restaurant'],['Bún chả','Check with restaurant'],['Chả cá','Check with restaurant'],['Phở','Check with restaurant']]},
+{id:'hoa-an-vien',name:'Nhà Hàng Hoa An Viên',city:'Hanoi',type:'Asian',diet:['family'],price:350000,address:'95 Lê Đức Thọ, Nam Từ Liêm, Hà Nội, Việt Nam',dishes:['gà hấp lá chanh','sườn nướng BBQ','cá hồi','tôm sú','lẩu Thái hải sản','lẩu gà Đông Tảo','bò Wagyu'],tags:['Group dining','Asian'],menu:[['Trứng rán','40,000 VND'],['Gà hấp lá chanh','242,000 VND'],['Sườn lợn nướng BBQ','320,000 VND'],['Cá hồi Na Uy','960,000 VND/kg'],['Tôm sú','960,000 VND/kg'],['Lẩu Thái hải sản','1,050,000 VND/nồi'],['Lẩu gà Đông Tảo','980,000 VND/nồi'],['Bò Wagyu bít tết','2,188,000 VND/phần']]},
+{id:'maison-sen',name:'Maison Sen Buffet',city:'Hanoi',type:'Buffet',diet:['vegetarian','family'],price:480000,address:'275 Nguyễn Trãi, Khương Đình, Hà Nội, Việt Nam',dishes:['buffet','seafood','dessert','món Việt'],tags:['Buffet','Family friendly'],menu:[['Vietnamese buffet','Check current price'],['Seafood selection','Menu varies'],['Dessert selection','Menu varies']]},
+{id:'bo-to',name:'Bò Tơ Quán Mộc',city:'Hanoi',type:'BBQ',diet:['family'],price:250000,address:'88 Tố Hữu, Hà Đông, Hà Nội, Việt Nam',dishes:['bò tơ','bò nướng','lẩu bò'],tags:['Vietnamese BBQ','Group dining'],menu:[['Beef specialties','Check with restaurant'],['Grilled beef','Check with restaurant'],['Hot pot','Check with restaurant']]},
+// HANOI — uploaded document
+{id:'pho-bat-dan',name:'Phở Gia Truyền Bát Đàn',city:'Hanoi',type:'Vietnamese',diet:[],price:90000,address:'49 Bát Đàn, Hoàn Kiếm, Hà Nội, Việt Nam',dishes:['phở bò','beef pho'],tags:['Traditional Vietnamese','Low budget'],menu:[['Phở bò','Check with restaurant']]},
+{id:'huong-lien',name:'Bún Chả Hương Liên',city:'Hanoi',type:'Vietnamese',diet:[],price:100000,address:'24 Lê Văn Hưu, Hai Bà Trưng, Hà Nội, Việt Nam',dishes:['bún chả','grilled pork noodles'],tags:['Popular with visitors','Low budget'],menu:[['Bún chả','Check with restaurant']]},
+{id:'banh-mi-25',name:'Bánh Mì 25',city:'Hanoi',type:'Vietnamese',diet:['vegetarian'],price:60000,address:'25 Hàng Cá, Hoàn Kiếm, Hà Nội, Việt Nam',dishes:['bánh mì','Vietnamese sandwich'],tags:['Street food','Vegetarian options noted in source'],menu:[['Bánh mì','Check with restaurant']]},
+{id:'bach-phuong',name:'Bún Bò Nam Bộ Bách Phương',city:'Hanoi',type:'Vietnamese',diet:[],price:90000,address:'67 Hàng Điếu, Hoàn Kiếm, Hà Nội, Việt Nam',dishes:['bún bò Nam Bộ','beef vermicelli'],tags:['Local favorite','Low budget'],menu:[['Bún bò Nam Bộ','Check with restaurant']]},
+{id:'cha-ca-la-vong',name:'Chả Cá Lã Vọng',city:'Hanoi',type:'Vietnamese',diet:[],price:250000,address:'14 Chả Cá, Hoàn Kiếm, Hà Nội, Việt Nam',dishes:['chả cá','turmeric fish'],tags:['Hanoi specialty'],menu:[['Chả cá','Check with restaurant']]},
+{id:'thanh-van',name:'Bánh Cuốn Gia Truyền Thanh Vân',city:'Hanoi',type:'Vietnamese',diet:[],price:80000,address:'14 Hàng Gà, Hoàn Kiếm, Hà Nội, Việt Nam',dishes:['bánh cuốn','steamed rice rolls'],tags:['Traditional','Food experience'],menu:[['Bánh cuốn','Check with restaurant']]},
+{id:'cafe-giang',name:'Café Giảng',city:'Hanoi',type:'Coffee',diet:[],price:50000,address:'39 Nguyễn Hữu Huân, Hoàn Kiếm, Hà Nội, Việt Nam',dishes:['cà phê trứng','egg coffee','coffee'],tags:['Egg coffee','Cafe'],menu:[['Cà phê trứng','Check with cafe']]},
+{id:'tam-vi',name:'Nhà hàng Tầm Vị',city:'Hanoi',type:'Vietnamese',diet:[],price:400000,address:'4B Yên Thế, Đống Đa, Hà Nội, Việt Nam',dishes:['cơm nhà','Vietnamese home cooking'],tags:['Northern Vietnamese','Mid–high budget'],menu:[['Seasonal home-style dishes','Check with restaurant']]},
+{id:'net-hue',name:'Nét Huế',city:'Hanoi',type:'Vietnamese',diet:[],price:180000,address:'198 Hàng Bông, Hoàn Kiếm, Hà Nội, Việt Nam',dishes:['bún bò Huế','bánh bèo','bánh lọc','bánh nậm'],tags:['Central Vietnamese'],menu:[['Huế specialties','Check with restaurant']]},
+{id:'uu-dam',name:'Ưu Đàm Chay',city:'Hanoi',type:'Vegetarian',diet:['vegetarian'],price:350000,address:'34 Hàng Bài, Hoàn Kiếm, Hà Nội, Việt Nam',dishes:['đồ chay','vegetarian','vegan'],tags:['Vegetarian','High budget'],menu:[['Vegetarian dishes','Check with restaurant']]},
+{id:'sadhu',name:'Sadhu Vegetarian Buffet',city:'Hanoi',type:'Buffet',diet:['vegetarian'],price:300000,address:'87 Lý Thường Kiệt, Hoàn Kiếm, Hà Nội, Việt Nam',dishes:['buffet chay','vegetarian buffet','vegan'],tags:['Vegetarian buffet'],menu:[['Vegetarian buffet','Check with restaurant']]},
+{id:'sen-tay-ho',name:'Sen Tây Hồ',city:'Hanoi',type:'Buffet',diet:['family'],price:400000,address:'614 Lạc Long Quân, Tây Hồ, Hà Nội, Việt Nam',dishes:['buffet','seafood','Vietnamese food'],tags:['Large groups','Buffet'],menu:[['Buffet selection','Check current price']]},
+{id:'gogi-hai-ba-trung',name:'GoGi House – Hai Bà Trưng',city:'Hanoi',type:'BBQ',diet:[],price:300000,address:'22B Hai Bà Trưng, Hoàn Kiếm, Hà Nội, Việt Nam',dishes:['Korean BBQ','thịt nướng Hàn Quốc','BBQ'],tags:['Korean BBQ'],menu:[['BBQ set','Check with restaurant']]},
+{id:'hanoi-garden',name:'Hanoi Garden Restaurant',city:'Hanoi',type:'Asian',diet:[],price:500000,address:'36 Hàng Mành, Hoàn Kiếm, Hà Nội, Việt Nam',dishes:['Vietnamese food','Asian cuisine'],tags:['Garden dining','High budget'],menu:[['Vietnamese and Asian dishes','Check with restaurant']]},
+// HUE — uploaded document
+{id:'me-keo',name:'Bún bò Mệ Kéo',city:'Hue',type:'Vietnamese',diet:[],price:60000,address:'20 Bạch Đằng, Phú Xuân, Huế, Việt Nam',dishes:['bún bò Huế','chả cua','giò heo'],allergens:'Crab/shellfish; contains pork and beef.',tags:['Bún bò Huế','Allergen information'],menu:[['Bún bò Huế','Check with restaurant']]},
+{id:'o-cuong',name:'Bún bò O Cương Chú Điệp',city:'Hue',type:'Vietnamese',diet:[],price:60000,address:'6 Trần Thúc Nhẫn, Huế, Việt Nam',dishes:['bún bò Huế','mắm ruốc'],allergens:'Shrimp paste may be present; contains beef and pork.',tags:['Bún bò Huế','Ask about ingredients'],menu:[['Bún bò Huế','Check with restaurant']]},
+{id:'hoa-dong',name:'Cơm hến Hoa Đông',city:'Hue',type:'Vietnamese',diet:[],price:50000,address:'64 kiệt 7 Ưng Bình, Vĩ Dạ, Huế, Việt Nam',dishes:['cơm hến','bún hến','hến xúc bánh tráng'],allergens:'Clams/shellfish, shrimp paste and peanuts; pork fat may be used.',tags:['Hue specialty','Allergen information'],menu:[['Cơm hến','Check with restaurant'],['Bún hến','Check with restaurant']]},
+{id:'huong-crab',name:'Bánh canh cua rời Hương',city:'Hue',type:'Seafood',diet:[],price:60000,address:'30 Phạm Hồng Thái, Huế, Việt Nam',dishes:['bánh canh cua','crab noodle soup'],allergens:'Crab; broth may contain pork bones.',tags:['Crab noodle soup','Allergen information'],menu:[['Bánh canh cua','Check with restaurant']]},
+{id:'di-huong-fish',name:'Bánh canh cá lóc Dì Hương',city:'Hue',type:'Seafood',diet:[],price:50000,address:'14 Lê Thánh Tôn, Huế, Việt Nam',dishes:['bánh canh cá lóc','snakehead fish noodle soup'],allergens:'Fish.',tags:['Fish noodle soup','Allergen information'],menu:[['Bánh canh cá lóc','Check with restaurant']]},
+{id:'quan-hanh',name:'Quán Hạnh',city:'Hue',type:'Vietnamese',diet:[],price:100000,address:'11–15 Phó Đức Chính, Huế, Việt Nam',dishes:['bánh khoái','bánh bèo','bánh nậm','bánh lọc','nem lụi'],allergens:'May contain shrimp, egg and peanuts; pork is commonly used.',tags:['Hue cakes','Ask about ingredients'],menu:[['Bánh khoái','Check with restaurant'],['Bánh bèo / nậm / lọc','Check with restaurant'],['Nem lụi','Check with restaurant']]},
+{id:'ba-do',name:'Bánh mâm Huế Bà Đỏ',city:'Hue',type:'Vietnamese',diet:[],price:70000,address:'8 Nguyễn Bỉnh Khiêm, Huế, Việt Nam',dishes:['bánh bèo','bánh nậm','bánh lọc'],allergens:'Shrimp and fish sauce; pork may be used.',tags:['Hue cakes','Allergen information'],menu:[['Bánh bèo chén','Check with restaurant'],['Bánh nậm / lọc','Check with restaurant']]},
+{id:'huyen-anh',name:'Bánh ướt thịt nướng Huyền Anh',city:'Hue',type:'Vietnamese',diet:[],price:70000,address:'50 Kim Long, Huế, Việt Nam',dishes:['bánh ướt thịt nướng','bún thịt nướng'],allergens:'Peanuts and sesame may be in dipping sauce; contains pork.',tags:['Grilled pork','Allergen information'],menu:[['Bánh ướt thịt nướng','Check with restaurant']]},
+{id:'tai-phu',name:'Nem lụi Tài Phú',city:'Hue',type:'BBQ',diet:[],price:80000,address:'2 Điện Biên Phủ, Vĩnh Ninh, Huế, Việt Nam',dishes:['nem lụi','bánh khoái'],allergens:'Peanuts, sesame and pork liver may be present; pork-based nem.',tags:['Grilled specialties','Allergen information'],menu:[['Nem lụi','Check with restaurant'],['Bánh khoái','Check with restaurant']]},
+{id:'chi-hue',name:'Bánh ép chị Huệ',city:'Hue',type:'Vietnamese',diet:[],price:40000,address:'118 Lê Ngô Cát, Huế, Việt Nam',dishes:['bánh ép khô','bánh ép dẻo','egg pancake'],allergens:'Egg; may contain pork.',tags:['Street food','Hue snack'],menu:[['Bánh ép khô / dẻo','Check with restaurant']]},
+{id:'am-phu',name:'Cơm Âm Phủ 51',city:'Hue',type:'Vietnamese',diet:[],price:90000,address:'51 Nguyễn Thái Học, Huế, Việt Nam',dishes:['cơm âm phủ','rice platter'],allergens:'Shrimp and egg; pork is used.',tags:['Hue rice dish'],menu:[['Cơm Âm Phủ','Check with restaurant']]},
+{id:'chan',name:'Cơm niêu Chạn',city:'Hue',type:'Vietnamese',diet:[],price:150000,address:'Nguyễn Thái Học, Huế, Việt Nam',dishes:['cơm niêu','vả trộn','cá bống kho tộ','canh chua'],allergens:'Some dishes may contain shrimp paste or fermented shrimp.',tags:['Home-style Hue food'],menu:[['Rice pot and home-style dishes','Check with restaurant']]},
+{id:'san-may',name:'Nhà hàng chay Sân Mây',city:'Hue',type:'Vegetarian',diet:['vegetarian'],price:120000,address:'8 Thanh Tịnh, Vĩ Dạ, Huế, Việt Nam',dishes:['đồ chay','vegan','đậu hũ','nấm','rau củ'],allergens:'Soy, nuts and mushrooms may be present.',tags:['Vegetarian','Plant-based'],menu:[['Vegetarian Hue dishes','Check with restaurant']]},
+{id:'lien-hoa',name:'Cơm chay Liên Hoa',city:'Hue',type:'Vegetarian',diet:['vegetarian'],price:100000,address:'3 Lê Quý Đôn, Huế, Việt Nam',dishes:['cơm chay','bánh chay','vegan'],allergens:'Soy, wheat gluten and peanuts may be present.',tags:['Vegetarian','Plant-based'],menu:[['Vegetarian rice and dishes','Check with restaurant']]},
+{id:'che-hem',name:'Chè Hẻm Hùng Vương',city:'Hue',type:'Dessert',diet:['vegetarian'],price:35000,address:'Kiệt 29 Hùng Vương, Huế, Việt Nam',dishes:['chè Huế','chè hạt sen','chè khoai tía','chè bột lọc'],allergens:'Peanuts and coconut milk; one listed dessert may contain roast pork.',tags:['Hue desserts','Street food'],menu:[['Hue sweet soups','Check with restaurant']]},
+// HOI AN — uploaded PDF
+{id:'temple-hoian',name:'The Temple Restaurant & Lounge',city:'Hoi An',type:'Asian',diet:[],price:1800000,address:'132 Hùng Vương, khối 5, Cẩm Phô, Hội An, Việt Nam (La Siesta Resort & Spa)',dishes:['Wagyu','foie gras','cá chẽm áp chảo','sườn cừu nướng'],tags:['Fine dining','High budget'],menu:[['Tasting menu','1,200,000–3,500,000 VND/person'],['Seared sea bass','Check with restaurant'],['Grilled lamb rack','Check with restaurant']]},
+{id:'red-bean',name:'Red Bean Hoi An Restaurant',city:'Hoi An',type:'Vietnamese',diet:[],price:1400000,address:'132 Hùng Vương, khối 5, Cẩm Phô, Hội An, Việt Nam',dishes:['cao lầu','tôm hùm sốt sa tế','royal set menu'],tags:['Fine dining','High budget'],menu:[['Set menu','1,000,000–2,800,000 VND/person'],['Cao lầu','Check with restaurant']]},
+{id:'aubergine43',name:'Aubergine43 Restaurant',city:'Hoi An',type:'Asian',diet:[],price:2500000,address:'149/1 Trần Nhân Tông, Cẩm Châu, Hội An, Việt Nam',dishes:['fusion','tasting menu','ức vịt','tôm hùm'],tags:['Fusion dining','High budget'],menu:[['Tasting menu','1,500,000–4,500,000 VND/person']]},
+{id:'mango-mango',name:'Mango Mango',city:'Hoi An',type:'Seafood',diet:[],price:1500000,address:'45 Nguyễn Phúc Chu, An Hội, Hội An, Việt Nam',dishes:['cá ngừ','tôm hùm','seafood','Latin cuisine'],tags:['Riverside dining','High budget'],menu:[['Main dishes','1,000,000–3,000,000 VND/person']]},
+{id:'green-mango',name:'Green Mango Hội An',city:'Hoi An',type:'Asian',diet:[],price:1500000,address:'54 Nguyễn Thái Học, Minh An, Hội An, Việt Nam',dishes:['bò Angus','mì Ý mực đen','Italian','Asian cuisine'],tags:['Fusion cuisine','High budget'],menu:[['Main dishes','1,000,000–2,500,000 VND/person']]},
+{id:'ba-buoi',name:'Cơm gà Bà Buội',city:'Hoi An',type:'Vietnamese',diet:[],price:100000,address:'22 Phan Chu Trinh, Minh An, Hội An, Việt Nam',dishes:['cơm gà Hội An','chicken rice'],tags:['Hoi An specialty','Mid budget'],menu:[['Cơm gà','50,000–150,000 VND/person']]},
+{id:'morning-glory',name:'Morning Glory Original',city:'Hoi An',type:'Vietnamese',diet:[],price:250000,address:'106 Nguyễn Thái Học, Minh An, Hội An, Việt Nam',dishes:['bánh hoa hồng trắng','white rose dumplings','bánh xèo','Vietnamese street food'],tags:['Hoi An specialty','Mid budget'],menu:[['Local specialties','150,000–350,000 VND/person']]},
+{id:'miss-ly',name:'Nhà hàng Miss Ly',city:'Hoi An',type:'Vietnamese',diet:[],price:170000,address:'22 Nguyễn Huệ, Minh An, Hội An, Việt Nam',dishes:['hoành thánh chiên','thịt heo nướng','wonton'],tags:['Traditional cuisine','Mid budget'],menu:[['Local dishes','100,000–250,000 VND/person']]},
+{id:'white-rose',name:'Bánh Bao Bánh Vạc Bông Hồng Trắng',city:'Hoi An',type:'Vietnamese',diet:[],price:100000,address:'533 Hai Bà Trưng, Cẩm Phô, Hội An, Việt Nam',dishes:['bánh bao bánh vạc','white rose dumplings'],tags:['Hoi An specialty','Traditional'],menu:[['White rose dumplings','70,000–150,000 VND/person']]},
+{id:'gieng-ba-le',name:'Quán ăn Giếng Bá Lễ',city:'Hoi An',type:'BBQ',diet:[],price:160000,address:'51 Trần Hưng Đạo, Minh An, Hội An, Việt Nam (trong kiệt nhỏ)',dishes:['thịt nướng','nem lụi','bánh xèo','ram chiên'],tags:['Grilled specialties','Mid budget'],menu:[['Grilled combo','120,000–200,000 VND/person']]},
+{id:'banh-mi-phuong',name:'Bánh mì Phượng',city:'Hoi An',type:'Vietnamese',diet:[],price:45000,address:'2B Phan Chu Trinh, Cẩm Châu, Hội An, Việt Nam',dishes:['bánh mì','Vietnamese sandwich'],tags:['Street food','Low budget'],menu:[['Bánh mì','30,000–60,000 VND/person']]},
+{id:'cao-lau-thanh',name:'Cao lầu Thanh',city:'Hoi An',type:'Vietnamese',diet:[],price:45000,address:'26 Thái Phiên, Minh An, Hội An, Việt Nam',dishes:['cao lầu','Hoi An noodles'],tags:['Hoi An specialty','Low budget'],menu:[['Cao lầu','35,000–50,000 VND/person']]},
+{id:'ba-gia',name:'Bánh đập hến trộn Bà Già',city:'Hoi An',type:'Seafood',diet:[],price:40000,address:'Cẩm Nam, Hội An, Việt Nam (qua cầu Cẩm Nam rẽ trái)',dishes:['bánh đập','hến trộn','clam'],tags:['Street food','Low budget'],menu:[['Bánh đập hến trộn','20,000–60,000 VND/person']]},
+{id:'mot-hoian',name:'Mót Hội An',city:'Hoi An',type:'Coffee',diet:['vegetarian'],price:20000,address:'150 Trần Phú, Minh An, Hội An, Việt Nam',dishes:['nước thảo mộc','herbal drink','lemongrass ginger tea'],tags:['Local drink','Low budget'],menu:[['Herbal drink','15,000–25,000 VND/person']]},
+{id:'ba-chin',name:'Thịt nướng bờ sông bánh ướt bà Chín',city:'Hoi An',type:'BBQ',diet:[],price:50000,address:'Ven sông Hoài, đường Bạch Đằng, Minh An, Hội An, Việt Nam',dishes:['thịt nướng','bánh ướt','grilled pork'],tags:['Street food','Riverside'],menu:[['Grilled pork with rice paper','30,000–70,000 VND/person']]}
+];
+
+const foodPassport=[['🍜','Phở'],['🥖','Bánh mì'],['🥢','Bún chả'],['🍲','Bún bò Huế'],['🍚','Cơm tấm'],['🍝','Cao lầu'],['🥞','Bánh xèo'],['🐟','Chả cá'],['🍤','Seafood'],['🥟','White rose']];
+let activeMapQuery='restaurants in Vietnam';
+const $=id=>document.getElementById(id);
+function normalizeText(value){return String(value||'').toLocaleLowerCase('vi').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/Đ/g,'D')}
+function money(v){return new Intl.NumberFormat('en-US').format(v)+' VND'}
+function googleSearchUrl(r){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(r.name+' '+r.address)}
+function showOnGoogleMap(r){activeMapQuery=r.name+' '+r.address;$('restaurantMap').src='https://www.google.com/maps?q='+encodeURIComponent(activeMapQuery)+'&output=embed';$('mapSearchInput').value=r.name;$('map-section').scrollIntoView({behavior:'smooth'});}
+function renderRestaurants(list=restaurants){
+ $('restaurantGrid').innerHTML=list.length?list.map(r=>`<article class="restaurant-card"><div class="restaurant-body"><div class="tags">${r.tags.map(t=>`<span class="tag">${t}</span>`).join('')}<span class="tag">${r.city==='Hanoi'?'Hà Nội':r.city==='Hue'?'Huế':r.city==='Hoi An'?'Hội An':r.city}</span></div><h3>${r.name}</h3><div class="restaurant-location">📍 <strong>${r.address}</strong></div><div class="restaurant-dishes"><span>Popular dishes:</span> ${r.dishes.join(', ')}</div>${r.allergens?`<div class="allergen-note">⚠️ ${r.allergens}</div>`:''}<div class="price">Estimated from ${money(r.price)} / person*</div><div class="card-actions"><button class="btn btn-blue" onclick="openRestaurant('${r.id}')">View details</button><button class="btn btn-orange" onclick="openDirections('${r.id}')">Google Maps</button></div></div></article>`).join(''):`<div class="empty-state">No restaurants match your search. Try a dish, restaurant name or city.</div>`;
+ $('resultCount').textContent=`Showing ${list.length} of ${restaurants.length} restaurants`;
+}
+function applyFilters(){const city=$('cityFilter').value,food=$('foodFilter').value,diet=$('dietFilter').value,budget=$('budgetFilter').value,q=normalizeText($('heroSearch').value.trim());const list=restaurants.filter(r=>(city==='all'||r.city===city)&&(food==='all'||r.type===food||(food==='Vietnamese'&&r.type==='Vegetarian'))&&(diet==='all'||r.diet.includes(diet))&&(budget==='all'||(budget==='low'?r.price<200000:budget==='mid'?r.price>=200000&&r.price<=400000:r.price>400000))&&(!q||normalizeText(`${r.name} ${r.city} ${r.type} ${r.address} ${r.dishes.join(' ')} ${r.tags.join(' ')}`).includes(q)));renderRestaurants(list)}
+function openRestaurant(id){const r=restaurants.find(x=>x.id===id);if(!r)return;$('modalContent').innerHTML=`<span class="section-tag">${r.type.toUpperCase()} · ${r.city.toUpperCase()}</span><h2>${r.name}</h2><p class="modal-address">📍 <strong>${r.address}</strong></p><div class="tags">${r.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div><h3>Popular dishes / menu notes</h3><div class="modal-menu">${r.menu.map(m=>`<div class="menu-row"><span>${m[0]}</span><span>${m[1]}</span></div>`).join('')}</div>${r.allergens?`<p class="allergen-note">⚠️ Ingredient / allergen note from the supplied guide: ${r.allergens}</p>`:''}<p><strong>Address for navigation:</strong><br>${r.address}</p><div class="card-actions" style="margin-top:22px"><button class="btn btn-orange" onclick="openDirections('${r.id}')">Open Google Maps</button><button class="btn btn-blue" onclick="showOnGoogleMap(restaurants.find(x=>x.id==='${r.id}'));closeModal()">Show embedded map</button></div><p class="map-note">* Prices are indicative examples from the provided document where available; otherwise they are estimates for demo purposes. Confirm price, opening hours and exact branch with the restaurant before visiting.</p>`;$('restaurantModal').classList.add('open');$('restaurantModal').setAttribute('aria-hidden','false')}
+function closeModal(){$('restaurantModal').classList.remove('open');$('restaurantModal').setAttribute('aria-hidden','true')}
+function openDirections(id){const r=restaurants.find(x=>x.id===id);if(r)window.open(googleSearchUrl(r),'_blank','noopener,noreferrer')}
+function populateSelects(){restaurants.forEach(r=>{const opt=`<option value="${r.id}">${r.name} — ${r.city==='Hanoi'?'Hà Nội':r.city==='Hue'?'Huế':r.city==='Hoi An'?'Hội An':r.city}</option>`;$('mapRestaurantSelect').insertAdjacentHTML('beforeend',opt);$('calcRestaurant').insertAdjacentHTML('beforeend',opt)});$('calcRestaurant').value='ngon';updatePrice()}
+function searchMap(){const q=$('mapSearchInput').value.trim();if(!q){$('restaurantMap').src='https://www.google.com/maps?q=restaurants%20in%20Vietnam&output=embed';return}const match=restaurants.find(r=>normalizeText(`${r.name} ${r.address} ${r.dishes.join(' ')}`).includes(normalizeText(q)));const query=match?match.name+' '+match.address:q+' restaurant Vietnam';$('restaurantMap').src='https://www.google.com/maps?q='+encodeURIComponent(query)+'&output=embed';activeMapQuery=query}
+function locateUser(){if(!navigator.geolocation){alert('Your browser does not support location access.');return}navigator.geolocation.getCurrentPosition(pos=>{$('restaurantMap').src=`https://www.google.com/maps?q=${pos.coords.latitude},${pos.coords.longitude}&z=14&output=embed`},()=>alert('Location permission was not granted.'))}
+function updatePrice(){const r=restaurants.find(x=>x.id===$('calcRestaurant').value);$('adultPrice').value=r?r.price:180000}
+function calculate(){const adults=Math.max(1,+$('adultCount').value||1),children=Math.max(0,+$('childCount').value||0),price=Math.max(0,+$('adultPrice').value||0),total=adults*price+children*price*.5;$('calcResult').innerHTML=`Estimated total: <strong>${money(Math.round(total))}</strong><br><small>≈ $${(total/25000).toFixed(2)} USD · demo rate 1 USD ≈ 25,000 VND</small>`}
+function renderPassport(){let saved=[];try{saved=JSON.parse(localStorage.getItem('eatExplorePassport')||'[]')}catch(e){}$('passportGrid').innerHTML=foodPassport.map(([icon,name],i)=>`<button class="passport-item ${saved.includes(i)?'tried':''}" data-index="${i}"><div class="food-icon">${icon}</div><strong>${name}</strong><small>${saved.includes(i)?'Tried':'Tap to mark'}</small></button>`).join('');document.querySelectorAll('.passport-item').forEach(b=>b.addEventListener('click',()=>{let s=[];try{s=JSON.parse(localStorage.getItem('eatExplorePassport')||'[]')}catch(e){}const i=+b.dataset.index;s=s.includes(i)?s.filter(x=>x!==i):[...s,i];localStorage.setItem('eatExplorePassport',JSON.stringify(s));renderPassport()}))}
+function setupContactMap(){document.querySelectorAll('[data-city-map]').forEach(btn=>btn.addEventListener('click',()=>{const city=btn.querySelector('strong')?.textContent.trim()||btn.textContent.trim();const url=`https://www.google.com/maps?q=${encodeURIComponent(city+', Vietnam')}&z=12&output=embed`;$('restaurantMap').src=url;$('googleMapFrame').src=url;$('mapSearchInput').value=city;$('map-section').scrollIntoView({behavior:'smooth'})}))}
+document.addEventListener('DOMContentLoaded',()=>{
+ renderRestaurants();populateSelects();renderPassport();setupContactMap();
+ $('heroSearchBtn').addEventListener('click',()=>{applyFilters();$('restaurants').scrollIntoView({behavior:'smooth'})});$('heroSearch').addEventListener('input',applyFilters);$('heroSearch').addEventListener('keydown',e=>{if(e.key==='Enter'){$('heroSearchBtn').click()}});
+ ['cityFilter','foodFilter','dietFilter','budgetFilter'].forEach(id=>$(id).addEventListener('change',applyFilters));$('resetFilters').addEventListener('click',()=>{['cityFilter','foodFilter','dietFilter','budgetFilter'].forEach(id=>$(id).value='all');$('heroSearch').value='';renderRestaurants()});
+ $('mapRestaurantSelect').addEventListener('change',e=>{const r=restaurants.find(x=>x.id===e.target.value);if(r)showOnGoogleMap(r)});$('mapSearchBtn').addEventListener('click',searchMap);$('mapSearchInput').addEventListener('keydown',e=>{if(e.key==='Enter')searchMap()});$('locateBtn').addEventListener('click',locateUser);$('calcRestaurant').addEventListener('change',updatePrice);$('calculateBtn').addEventListener('click',calculate);
+ document.querySelectorAll('[data-close-modal]').forEach(x=>x.addEventListener('click',closeModal));document.addEventListener('keydown',e=>e.key==='Escape'&&closeModal());$('navToggle').addEventListener('click',()=>$('mainNav').classList.toggle('open'));document.querySelectorAll('#mainNav a').forEach(a=>a.addEventListener('click',()=>$('mainNav').classList.remove('open')));
+});
+
+  </script>
+</body>
+</html>
